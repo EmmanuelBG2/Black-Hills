@@ -9,6 +9,7 @@ TagManager:
   - NPCLight
   - NPC
   - WitchStanding
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - NPC
   - Interactable
-  - 
+  - Shield
   - 
   - 
   - 

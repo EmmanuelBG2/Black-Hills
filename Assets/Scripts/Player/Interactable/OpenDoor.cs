@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class OpenDoor : Interactable
 {
-    public string Intro;
+    public string Escena;
+    bool tieneLlave = false;
 
     public override void Interact()
     {
+
         base.Interact();
 
-        SceneManager.LoadScene(Intro);
+        SceneManager.LoadScene(Escena);
     }
 }

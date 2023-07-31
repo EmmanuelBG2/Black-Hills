@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 
 public class MovimientoWitch : MonoBehaviour
@@ -13,6 +14,7 @@ public class MovimientoWitch : MonoBehaviour
     public Transform target;
 
     public AudioSource audioSusto;
+    public AudioSource audioAmbiente;
 
     private int tiempoReaccion, movimiento;
 
@@ -21,12 +23,20 @@ public class MovimientoWitch : MonoBehaviour
     public float velocidad = 25F;
 
     public LayerMask capaDelJugador;
+    public LayerMask capaDeEspalda;
+
+    private BoxCollider boxCollider;
 
     bool espera, camina, gira;
 
     bool estarAlerta;
     bool hacerScream;
     bool audioPlayed = false;
+    bool audioAmbience = false;
+
+    public AudioSource terrenoAudioSource;
+    public float volumenAlerta = 0.03f;
+    private float volumenOriginal;
 
 
     private Rigidbody rb;
@@ -34,14 +44,20 @@ public class MovimientoWitch : MonoBehaviour
     void Awake()
     {
         target = GameObject.Find("Player")?.transform;
+        terrenoAudioSource = GameObject.Find("Forest").GetComponent<AudioSource>();
 
-        if (target == null)
+        if (terrenoAudioSource != null)
         {
-            Debug.LogWarning("El objeto Player no se encontró en la escena. Asegúrate de que el objeto exista y tenga el componente Transform.");
+            volumenOriginal = terrenoAudioSource.volume;
         }
 
         rb = GetComponent<Rigidbody>();
         rb.interpolation = RigidbodyInterpolation.Interpolate;
+    }
+
+    private void Start()
+    {
+        boxCollider = GetComponent<BoxCollider>();
     }
 
 
@@ -49,7 +65,6 @@ public class MovimientoWitch : MonoBehaviour
     {
 
         estarAlerta = Physics.CheckSphere(transform.position, rangoAlerta, capaDelJugador);
-
         hacerScream = Physics.CheckSphere(transform.position, rangoAttack, capaDelJugador);
 
         if (espera)
@@ -60,6 +75,19 @@ public class MovimientoWitch : MonoBehaviour
         if (estarAlerta)
         {
 
+            if (terrenoAudioSource != null)
+            {
+                terrenoAudioSource.volume = volumenOriginal * volumenAlerta;
+            }
+
+            if (!audioAmbience)
+            {
+                AudioSource audioSource2 = Instantiate(audioAmbiente, transform.position, Quaternion.identity);
+                audioSource2.Play();
+                audioAmbience = true;
+                Destroy(audioSource2.gameObject, 10F);
+            }
+
             Vector3 posJugador = new Vector3(target.position.x, transform.position.y, target.position.z);
             transform.LookAt(posJugador);
 
@@ -68,6 +96,7 @@ public class MovimientoWitch : MonoBehaviour
 
             if (hacerScream)
             {
+                DesactivarCollider();
                 GetComponent<Animator>().SetBool("_isRunning", true);
                 transform.position = Vector3.MoveTowards(transform.position, posJugador, velocidad * Time.deltaTime);
 
@@ -75,9 +104,8 @@ public class MovimientoWitch : MonoBehaviour
                 {
                     AudioSource audioSource1 = Instantiate(audioSusto, transform.position, Quaternion.identity);
                     audioSource1.Play();
-
                     audioPlayed = true;
-                    Destroy(audioSource1.gameObject, 4F);
+                    Destroy(audioSource1.gameObject, 2F);
                 }
             }
 
@@ -101,8 +129,22 @@ public class MovimientoWitch : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            terrenoAudioSource.volume = volumenOriginal;
             Destroy(gameObject);
         }
+
+        if (other.CompareTag("Shield"))
+        {
+            AudioSource audioSource2 = Instantiate(audioAmbiente, transform.position, Quaternion.identity);
+            terrenoAudioSource.volume = volumenOriginal;
+            Destroy(gameObject);
+            Destroy(audioSource2.gameObject, 2F);
+        }
+    }
+
+    void DesactivarCollider()
+    {
+        boxCollider.enabled = false;
     }
 
 }
