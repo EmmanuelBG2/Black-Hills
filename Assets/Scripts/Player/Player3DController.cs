@@ -109,10 +109,9 @@ public class Player3DController : MonoBehaviour
     {
         if (other.CompareTag("WitchStanding"))
         {
-            AudioSource audioSource1 = Instantiate(Respiracion, transform.position, Quaternion.identity);
-            audioSource1.Play();
-
-            Destroy(audioSource1.gameObject, 7F);
+                AudioSource audioSource1 = Instantiate(Respiracion, transform.position, Quaternion.identity);
+                audioSource1.Play();
+                Destroy(audioSource1.gameObject, 7F);
         }
     }
 

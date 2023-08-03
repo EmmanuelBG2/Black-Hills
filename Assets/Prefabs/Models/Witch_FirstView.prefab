@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 8456844227952504224}
   m_Layer: 0
   m_Name: cs_shoulder_right
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 9157952643096803023}
   m_Layer: 0
   m_Name: cs_sphere_012
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 649036073688352136}
   m_Layer: 0
   m_Name: cs_thigh_fk
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 7340165046390737994}
   m_Layer: 0
   m_Name: cs_circle
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -952,7 +952,7 @@ GameObject:
   - component: {fileID: 7472536223919853765}
   m_Layer: 0
   m_Name: cs_square
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1323,7 +1323,7 @@ GameObject:
   - component: {fileID: 1022489344281376077}
   m_Layer: 0
   m_Name: cs_foot_roll
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1645,6 +1645,51 @@ Transform:
   m_Father: {fileID: 8839365578532227224}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1685710337109283948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1389919957773032912}
+  - component: {fileID: 6735935074956885285}
+  m_Layer: 0
+  m_Name: Detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1389919957773032912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685710337109283948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2761543360422626314}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6735935074956885285
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685710337109283948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.21, y: 3.72, z: 2.5}
+  m_Center: {x: 0, y: 1.89, z: 6.73}
 --- !u!1 &1726086899399334397
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,7 +2063,7 @@ GameObject:
   - component: {fileID: 5389467756421355247}
   m_Layer: 0
   m_Name: cs_foot
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2165,7 +2210,7 @@ GameObject:
   - component: {fileID: 3685238424237745597}
   m_Layer: 0
   m_Name: cs_square_2
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2384,7 +2429,7 @@ GameObject:
   - component: {fileID: 7411506668994296222}
   m_Layer: 0
   m_Name: cs_master
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2879,7 +2924,7 @@ GameObject:
   - component: {fileID: 8322081313773710212}
   m_Layer: 0
   m_Name: Witch_Armature
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2922,7 +2967,7 @@ GameObject:
   - component: {fileID: 2756277717721912176}
   m_Layer: 0
   m_Name: cs_forearm_fk
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3068,7 +3113,6 @@ GameObject:
   - component: {fileID: 8120788212809047664}
   - component: {fileID: 8120788212809047666}
   - component: {fileID: 8120788212809047665}
-  - component: {fileID: 5977362246723119699}
   - component: {fileID: 8120788212809047667}
   m_Layer: 0
   m_Name: Witch_FirstView
@@ -3086,7 +3130,7 @@ Transform:
   m_GameObject: {fileID: 3249674384291667632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7893722794489084924}
@@ -3117,6 +3161,7 @@ Transform:
   - {fileID: 8322081313773710212}
   - {fileID: 2660570305364841545}
   - {fileID: 6756532017880317599}
+  - {fileID: 1389919957773032912}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3171,19 +3216,6 @@ CapsuleCollider:
   m_Height: 3.9652455
   m_Direction: 1
   m_Center: {x: 0, y: 1.9039997, z: -0.060195923}
---- !u!65 &5977362246723119699
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3249674384291667632}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 15.96, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 10}
 --- !u!114 &8120788212809047667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4154,7 +4186,7 @@ GameObject:
   - component: {fileID: 878533955176584389}
   m_Layer: 0
   m_Name: cs_neck
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4269,7 +4301,7 @@ GameObject:
   - component: {fileID: 3450404699141804998}
   m_Layer: 0
   m_Name: cs_hand
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4544,7 +4576,7 @@ GameObject:
   - component: {fileID: 7220272421498601542}
   m_Layer: 0
   m_Name: cs_foot.002
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4660,7 +4692,7 @@ GameObject:
   - component: {fileID: 7116698875598300312}
   m_Layer: 0
   m_Name: cs_circle_025
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4934,7 +4966,7 @@ GameObject:
   - component: {fileID: 4833999815128545057}
   m_Layer: 0
   m_Name: cs_toe
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5912,7 +5944,7 @@ GameObject:
   - component: {fileID: 5506482321352378310}
   m_Layer: 0
   m_Name: Witch
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6264,7 +6296,7 @@ GameObject:
   - component: {fileID: 7282167100789045399}
   m_Layer: 0
   m_Name: Witch_eye
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6903,7 +6935,7 @@ GameObject:
   - component: {fileID: 8654608866029071426}
   m_Layer: 0
   m_Name: cs_circle.001
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6986,7 +7018,7 @@ GameObject:
   - component: {fileID: 7058008781128402941}
   m_Layer: 0
   m_Name: cs_calf_fk
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7694,7 +7726,7 @@ GameObject:
   - component: {fileID: 7379282092973115281}
   m_Layer: 0
   m_Name: cs_arm_fk
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7808,7 +7840,7 @@ GameObject:
   - component: {fileID: 9113105244360186126}
   m_Layer: 0
   m_Name: Witch_Hair
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8156,7 +8188,7 @@ GameObject:
   - component: {fileID: 7816995470746660265}
   m_Layer: 0
   m_Name: cs_shoulder_left
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8367,7 +8399,7 @@ GameObject:
   - component: {fileID: 3754793610075678998}
   m_Layer: 0
   m_Name: cs_hips
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8609,7 +8641,7 @@ GameObject:
   - component: {fileID: 2721778975746969729}
   m_Layer: 0
   m_Name: cs_foot_01
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8979,7 +9011,7 @@ GameObject:
   - component: {fileID: 5140130137016699910}
   m_Layer: 0
   m_Name: cs_foot.001
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9604,7 +9636,7 @@ GameObject:
   - component: {fileID: 7528728771878559543}
   m_Layer: 0
   m_Name: cs_sphere
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9687,7 +9719,7 @@ GameObject:
   - component: {fileID: 1700432677769367321}
   m_Layer: 0
   m_Name: cs_head
-  m_TagString: Untagged
+  m_TagString: WitchStanding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

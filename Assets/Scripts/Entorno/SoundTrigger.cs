@@ -7,12 +7,18 @@ public class SoundTrigger : MonoBehaviour
     public AudioSource audioSourcePrefab1;
     public AudioSource audioSourcePrefab2;
 
+    bool playSonido = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(PlayAudioSources());
-            Destroy(gameObject, 4f);
+            if (!playSonido)
+            {
+                playSonido=true;
+                StartCoroutine(PlayAudioSources());
+                Destroy(gameObject, 4f);
+            }
         }
     }
 

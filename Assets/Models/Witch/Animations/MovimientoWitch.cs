@@ -38,6 +38,8 @@ public class MovimientoWitch : MonoBehaviour
     public float volumenAlerta = 0.03f;
     private float volumenOriginal;
 
+    private AudioSource audioAmbienteSource;
+
 
     private Rigidbody rb;
 
@@ -57,7 +59,7 @@ public class MovimientoWitch : MonoBehaviour
 
     private void Start()
     {
-        boxCollider = GetComponent<BoxCollider>();
+        boxCollider = GetComponentInChildren<BoxCollider>();
     }
 
 
@@ -80,13 +82,14 @@ public class MovimientoWitch : MonoBehaviour
                 terrenoAudioSource.volume = volumenOriginal * volumenAlerta;
             }
 
-            if (!audioAmbience)
+            if (!audioAmbience && audioAmbienteSource == null)
             {
-                AudioSource audioSource2 = Instantiate(audioAmbiente, transform.position, Quaternion.identity);
-                audioSource2.Play();
+                audioAmbienteSource = Instantiate(audioAmbiente, transform.position, Quaternion.identity);
+                audioAmbienteSource.Play();
                 audioAmbience = true;
-                Destroy(audioSource2.gameObject, 10F);
+                Destroy(audioAmbienteSource.gameObject, 7F);
             }
+
 
             Vector3 posJugador = new Vector3(target.position.x, transform.position.y, target.position.z);
             transform.LookAt(posJugador);
@@ -127,18 +130,15 @@ public class MovimientoWitch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Shield") || other.CompareTag("Player"))
         {
-            terrenoAudioSource.volume = volumenOriginal;
-            Destroy(gameObject);
-        }
+            if (audioAmbienteSource != null)
+            {
+                audioAmbienteSource.Stop();
+            }
 
-        if (other.CompareTag("Shield"))
-        {
-            AudioSource audioSource2 = Instantiate(audioAmbiente, transform.position, Quaternion.identity);
             terrenoAudioSource.volume = volumenOriginal;
             Destroy(gameObject);
-            Destroy(audioSource2.gameObject, 2F);
         }
     }
 
